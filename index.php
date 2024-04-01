@@ -1,40 +1,45 @@
-<?php
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>davaleba</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <form action="submit.php" method="post">
-      <h2>Register</h2>
-      <div class="form-group">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <div class="form-group">
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
-      </div>
-      <div class="form-group">
-        <input type="checkbox" id="agree" name="agree" required>
-        <label for="agree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
-      </div>
-      <button type="submit">submit</button>
+  <div>
+    <form action="" method="POST">
+      <input type="number" name="number1">
+      <select name="operand">
+        <option value="+">+</option>
+      </select>
+      <input type="number" name="number2">
+      <button>Click me</button>
     </form>
   </div>
-    
+
+  <h1>
+    <?php
+          if (isset($_POST['operand']) && isset ($_POST['number1']) && isset ($_POST['number2'])) {
+              $num1 = $_POST['number1'];
+              $num2 = $_POST['number2'];
+              $operand = $_POST['operand'];
+
+              switch ($operand) {
+                case '+':
+                  echo $num1 + $num2;
+                  break;
+
+                 default :
+                 echo "error"; 
+              }
+          }
+          
+      
+
+
+
+?>
+  </h1>
+  
 </body>
 </html>
-    
