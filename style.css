@@ -1,0 +1,552 @@
+/* sets variables for colors which are used for the page */
+:root {
+    --background-color: #f9f9f9;
+    --cyan: #4ce0d7;
+    --cyan-hover: #3dccc2;
+    --black: #262626;
+    --white: #ffffff;
+    --gray: #bcbcbc;
+    --pink: #f25e5e;
+    --pink-hover: #e14c4c;
+  }
+  /* makes the scrolling smooth when moving to sections from navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+  /* global styles for 0 spacings and font which is the same for every text */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
+  body {
+    background-color: var(--background-color);
+  }
+  /* header section css */
+  .header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 37px;
+    max-width: 1227px;
+    margin-bottom: 47px;
+  }
+  /* adds sticky header */
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    z-index: 2;
+  }
+  .logo {
+    max-width: 234px;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+    list-style: none;
+  }
+  .nav-link,
+  li button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+  }
+  .header-button,
+  .search-button {
+    border: none;
+    background-color: var(--cyan);
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  li button {
+    padding: 9px 32px 7px 32px;
+  }
+  .header-button:hover,
+  .search-button:hover {
+    background-color: var(--cyan-hover);
+  }
+  .search-button {
+    width: 47px;
+    height: 47px;
+    padding: 11px 11px 12px 12px;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: var(--black);
+    border: none;
+    padding: 0;
+  }
+  .nav-link:hover {
+    color: #5c5b5b;
+  }
+  .header-nav {
+    display: flex;
+    gap: 58px;
+  }
+  /* First section css with background image */
+  /* adds background image for the section */
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url(./assets/Mask_group.svg);
+    max-width: 1272px;
+    max-height: 559px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 140px;
+    margin-bottom: 73px;
+    padding: 218px 0 141px 53px;
+    border-radius: 30px;
+  }
+  h5 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--white);
+    letter-spacing: 23%;
+    margin-bottom: 22px;
+  }
+  .first-container h5 {
+    letter-spacing: 0.23em;
+  }
+  h1 {
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 69px;
+    color: var(--white);
+  }
+  /* giving h1 linear gradient */
+  h1 span {
+    font-weight: 700;
+    background: linear-gradient(to right, #4ce0d7, #8ba9f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .first-container p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--white);
+    width: 494px;
+  }
+  /* Topics section css */
+  .topics-container,
+  .trending-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 48px;
+    max-width: 1272px;
+    margin: 0 auto;
+    margin-bottom: 88px;
+  }
+  .trending-container {
+    max-width: 1204px;
+  }
+  .topics-line {
+    border: 1px solid var(--gray);
+    max-width: 1267px;
+    margin: 0 auto;
+    margin-bottom: 53px;
+  }
+  .container {
+    width: 100%;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  .topic-cards {
+    display: flex;
+    gap: 10px;
+  }
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    border-radius: 20px;
+    padding: 51px 30px 30px;
+    box-shadow: 0px 8px 8px 0px #0000000d;
+    background-color: var(--white);
+  }
+  .topic-cards :hover {
+    background-color: #bcfffb;
+  }
+  .topic-img {
+    width: 88px;
+    height: 88px;
+    align-items: center;
+  }
+  .topic-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+  .topic-card button {
+    border-radius: 40px;
+    background-color: var(--cyan);
+    border: none;
+    padding: 10px 40px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    width: 144px;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .topic-card button:hover {
+    background-color: var(--cyan-hover);
+  }
+  /* The latest trends css */
+  .third-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1204px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 97px;
+  }
+  .fashion-image {
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 23px;
+  }
+  .latest-trends-info,
+  .latest-trends-info div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .latest-trends-info {
+    gap: 389px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .latest-trends-info div {
+    gap: 21px;
+  }
+  .latest-trends-info img {
+    width: 66px;
+    height: 51px;
+  }
+  .latest-trends-info p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--gray);
+    width: 168px;
+  }
+  .mallory {
+    margin-right: 28px;
+  }
+  .latest-trends-info a {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    color: var(--pink);
+    text-decoration: none;
+    width: 216px;
+  }
+  .latest-trends-info a:hover {
+    color: var(--pink-hover);
+    text-decoration: underline;
+    transition: 0.2s;
+  }
+  /* creates fashion tag on the image with absolute position */
+  .fashion-tag {
+    position: absolute;
+    top: 23px;
+    left: 47px;
+    background-color: #262626;
+    padding: 10px 82px;
+    border-radius: 40px;
+    text-transform: uppercase;
+  }
+  .latest-trends {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+  }
+  h3 {
+    font-size: 26px;
+    line-height: 39px;
+    color: var(--black);
+    width: 100%;
+  }
+  .latest-trends h3 {
+    margin-bottom: 23px;
+  }
+  .latest-trends p {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--black);
+    margin-bottom: 40px;
+  }
+  .latest-trends-read-more {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+  }
+  .latest-trends-read-more img {
+    width: 51px;
+    width: 40px;
+  }
+  .latest-trends-read-more a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+    color: var(--cyan);
+    margin-bottom: 38px;
+  }
+  .latest-trends-read-more a:hover {
+    color: var(--cyan-hover);
+    text-decoration: underline;
+    transition: 0.2s;
+  }
+  /* Trendings css code */
+  .card {
+    width: 579px;
+    height: 680px;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.05);
+  }
+  .first {
+    position: relative;
+  }
+  .first h5 {
+    position: absolute;
+    top: 20px;
+    left: 34px;
+    text-align: center;
+    padding: 10px 50px;
+    width: 175px;
+    border-radius: 40px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+  }
+  .second {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .second p {
+    margin-left: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--gray);
+  }
+  #p2 {
+    margin-left: 200px;
+  }
+  .third {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 34px;
+    margin-bottom: 40px;
+  }
+  .third h3 {
+    max-width: 350px;
+  }
+  .third p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--black);
+    width: 400px;
+  }
+  .readmore {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .readmore a {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.24em;
+    color: var(--cyan);
+    text-decoration: none;
+  }
+  .trending-read-more {
+    margin-left: 22px;
+    margin-bottom: 42px;
+  }
+  .trdcards {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin: 0 auto;
+    max-width: 1204px;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  /* Info section */
+  .info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 69px;
+  }
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+    width: 1204px;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+  }
+  .div-image {
+    position: relative;
+    width: 548px;
+    height: 367px;
+  }
+  .div-image img {
+    width: 548px;
+    height: 367px;
+    border-radius: 20px;
+  }
+  .div-image h5 {
+    position: absolute;
+    top: 25px;
+    left: 34px;
+  }
+  .info-info-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .info-info-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 24px;
+    margin-bottom: 29px;
+  }
+  .info-trend,
+  .info-trend div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info-trend div {
+    gap: 17px;
+  }
+  .date-posted {
+    margin-right: 58px;
+    width: 168px;
+  }
+  .info-trend p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--gray);
+    margin-top: 26px;
+  }
+  .info-fashion-tag,
+  .fashion-tag-info {
+    padding: 10px 53px;
+    width: 175px;
+    text-wrap: nowrap;
+    text-align: center;
+  }
+  .fashion-tag-info {
+    padding: 10px 23px;
+  }
+  /* footer section */
+  .footer-div {
+    max-width: 1440px;
+    border-radius: 40px 40px 0 0;
+    box-shadow: 6px 0 6px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+    margin: 0 auto;
+  }
+  .footer-div-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 87px 89px 77px 84px;
+  }
+  .footer-div-info img {
+    max-width: 226px;
+    cursor: pointer;
+  }
+  .footer-div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+  }
+  .footer-div div h3 {
+    max-width: 227px;
+    padding-right: 30px;
+  }
+  .social-icons {
+    display: flex;
+    gap: 20px;
+  }
+  .social-icons a {
+    width: 31px;
+    height: 31px;
+  }
+  .social-icons img {
+    width: 100%;
+    height: 100%;
+  }
+  .hr-line {
+    margin: 0 87px;
+  }
+  .footer-div p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: var(--black);
+    margin: 34px 0 37px 88px;
+  }
+  /* creates animation while hovering on icons */
+  .social-icons a:hover {
+    transform: scale(1.5);
+  }
